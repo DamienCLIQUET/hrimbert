@@ -1,0 +1,12 @@
+@media screen and (max-width: 1200px) {
+    .tableaudetail {
+        width: calc((100% / 3) - 10px);
+        max-height: calc(100% / 4);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #logo_articles {
+        display: none;
+    }
+}

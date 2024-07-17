@@ -1,0 +1,186 @@
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+
+    .picto_fond {
+        margin-left: -9px;
+        margin-top: 13px;
+    }
+
+    .picto_cercle {
+        color: white;
+        margin-left: -14px;
+        margin-top: 13px;
+    }
+
+    .picto_plus {
+        color: white;
+        margin-left: -10.5px;
+        margin-top: 13px;
+    }
+
+    .picto_plus_produit {
+        color: white;
+        margin-left: -10.5px;
+        margin-top: 15px;
+    }
+
+    .picto_plus_action {
+        color: white;
+        margin-left: -10.5px;
+        margin-top: 14px;
+    }
+
+    .destop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .chantier_details_client {
+        flex-wrap: wrap;
+    }
+
+    .chantier_details_commentaire {
+        flex-wrap: wrap;
+    }
+
+    .chantier_details_commentaire textarea {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .produits_produits {
+        font-size: 14px !important;
+    }
+
+    .produits_produits_produit_zoneproduit_produit {
+        flex-wrap: wrap;
+    }
+    
+    .produits_produits_produit_zoneproduit_produit_quantite {
+        width: 15vw;
+    }
+    
+    .produits_produits_produit_zoneproduit_produit_unite {
+        width: 15vw;
+    }
+    
+    .produits_produits_produit_zoneproduit_produit_remise input {
+        width: 15vw;
+    }
+    
+    .produits_produits_produit_zoneproduit_produit_tarif input {
+        width: 15vw;
+    }
+
+    .liste_produits_box {
+        width: 100vw;
+        height: 100svh;
+        box-shadow: none;
+        border-radius: 0;
+    }    
+
+    .liste_produits_box_titres {
+        padding: 0;
+    }    
+
+    .liste_produits_box_corps_N {
+        width: calc(100% - 36px);
+        margin: 2px 5px;
+        padding: 5px;
+    }
+
+    .liste_produits_box_corps_A {
+        width: calc(100% - 36px);
+        margin: 2px 5px;
+        padding: 5px;
+    }
+
+    #liste_produits {
+        justify-content: flex-start;
+    }
+
+    .liste_produits_box_corps_A_nom_quantite {
+        height: auto;
+        margin: 0;
+        margin-left: -10px;
+        border-radius: 4px 0 0 4px;
+        padding-left: 2px;
+    }
+
+    .liste_produits_box_corps_A_nom_tarif {
+        height: auto;
+        margin: 0;
+        padding-left: 2px;
+    }
+
+    .liste_produits_box_corps_N_newnom input {
+        height: auto;
+        margin: 0;
+        padding-left: 2px;
+        margin-left: -10px;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .liste_produits_box_corps_A_newnom_quantite {
+        height: auto;
+        margin: 0;
+        padding-left: 2px;
+        margin-left: -10px;
+        border-radius: 4px 0 0 4px;
+    }
+    
+    .liste_produits_box_corps_A_newnom_unite {
+        height: auto;
+        margin: 0;
+        padding-left: 2px;
+        margin-left: 5px;
+    }
+    
+    .liste_produits_box_corps_A_newnom_designation {
+        height: auto;
+        margin: 0;
+        padding-left: 2px;
+    }
+
+    .photos_photos_photo{
+        width: 50%;
+    }
+
+    .fondfiltre {
+        color: white;
+        margin-left: -14px;
+        margin-top: 22px;
+    }
+
+    .filtre {
+        margin-left: -22px;
+        margin-top: 16.5px;
+    }
+
+    .new_action_box_text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #date_action {
+        width: 100%;
+    }
+
+    #type_action {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .actions_actions_action_user {
+        font-size: 10px !important;
+    }
+
+    .fiche_img {
+        min-width: calc(50svw - 20px);
+    }
+}

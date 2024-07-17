@@ -1,0 +1,408 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*body {
+    padding: 0;
+    margin: 0;
+    min-height: 100svh;
+    display: flex;
+}*/
+
+.chargement {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.chargement img {
+    width: 70%;
+}
+
+/*Page de connection*/
+.connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+}
+
+.connection p {
+    margin: 10px;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.connection input {
+    margin: 10px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+.connection_button {
+    border: 1px solid rgb(21, 114, 185);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background-color: rgb(21, 114, 185);
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.connection_button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(0, 0, 0);
+}
+
+.connection_button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/*Liste des chantiers*/
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 45px;
+    background-color: rgb(21, 114, 185);
+    color: white;
+}
+
+.header_titre {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header_titre a {
+    font-size: 25px;
+}
+
+.header_menu {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+    height: 40px;
+}
+
+.header i {
+    color: white;
+    margin: 10px;
+}
+
+#chantiers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: calc(100svh - 45px);
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.tableaudetail {
+    width: calc((100% / 6) - 10px);
+    margin-left: 5px;
+    max-height: calc(100% / 2);
+    margin-right: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.titrechantier1, .titrechantier2, .titrechantier3, .titrechantier4, .titrechantier5, .titrechantier6, .titrechantier7, .titrechantier8, .titrechantier9, .titrechantier10, .titrechantier20, .titrechantier25 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.chantier0 {
+    color: black;
+}
+
+.titrechantier1, .chantier1 {
+    color: purple;
+}
+
+.chantier1URGENT {
+    color: white;
+    background-color: purple !important;
+}
+
+.titrechantier2, .chantier2 {
+    color: orange;
+}
+
+.chantier2URGENT {
+    color: white;
+    background-color: orange !important;
+}
+
+.titrechantier3, .chantier3 {
+    color: green;
+}
+
+.chantier3URGENT {
+    color: white;
+    background-color: green !important;
+}
+
+.titrechantier4, .chantier4 {
+    color: gray;
+}
+
+.chantier4URGENT {
+    color: white;
+    background-color: gray !important;
+}
+
+.titrechantier5, .chantier5 {
+    color: yellowgreen;
+}
+
+.chantier5URGENT {
+    color: white;
+    background-color: yellowgreen !important;
+}
+
+.titrechantier6, .chantier6 {
+    color: Blue;
+}
+
+.chantier6URGENT {
+    color: white;
+    background-color: Blue !important;
+}
+
+.titrechantier7, .chantier7 {
+    color: #e92fff;
+}
+
+.chantier7URGENT {
+    color: white;
+    background-color: #e92fff !important;
+}
+
+.titrechantier8, .chantier8 {
+    color: red;
+}
+
+.chantier8URGENT {
+    color: white;
+    background-color: red !important;
+}
+
+.titrechantier9, .chantier9 {
+    color: brown;
+}
+
+.chantier9URGENT {
+    color: white;
+    background-color: brown !important;
+}
+
+.titrechantier10, .chantier10 {
+    color: #ff8da1;
+}
+
+.chantier10URGENT {
+    color: white;
+    background-color: #ff8da1 !important;
+}
+
+.titrechantier20, .chantier20 {
+    color: black;
+}
+
+.titrechantier25, .chantier25 {
+    color: black;
+}
+
+.leschantiers::-webkit-scrollbar {
+    display: none;
+}
+
+.leschantiers {
+    overflow-y: scroll;
+    /*background-color: white;*/
+    margin-bottom: 5px;
+}
+
+.chantier1, .chantier2, .chantier3, .chantier4, .chantier5, .chantier6, .chantier7, .chantier8, .chantier9, .chantier10, .chantier20, .chantier25, .chantier1URGENT, .chantier2URGENT, .chantier3URGENT, .chantier4URGENT, .chantier5URGENT, .chantier6URGENT, .chantier7URGENT, .chantier8URGENT, .chantier9URGENT, .chantier10URGENT {
+    width: calc(100% - 2px);
+    background-color: white;
+    border: solid grey 1px;
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 5px;
+    font-size: 18px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 2px;
+}
+
+.action i {
+    margin-left: 5px;
+}
+
+.action_action {
+    font-size: 0.8rem;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 5px;
+}
+
+.action_tarif {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    white-space: nowrap;
+}
+
+#new_chantier {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100svh;
+    top: 0;
+    left: 0;
+    background-color: #ffffffbd;
+}
+
+.new_chantier_box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+    border-radius: 0 0 10px 10px;
+    max-width: calc(100vw - 10px);
+}
+
+.new_chantier_box_titre {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 10px;
+}
+
+.new_chantier_box_titre i {
+    margin-right: 10px;
+    color: white;
+}
+
+.new_chantier_box_titre_titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 25px;
+    color: white;
+}
+
+.titrenewchantier1 {
+    background-color: purple;
+}
+
+.titrenewchantier2 {
+    background-color: orange;
+}
+
+.titrenewchantier3 {
+    background-color: green;
+}
+
+.titrenewchantier4 {
+    background-color: gray;
+}
+
+.titrenewchantier5 {
+    background-color: yellowgreen;
+}
+
+.titrenewchantier6 {
+    background-color: Blue;
+}
+
+.titrenewchantier7 {
+    background-color: #e92fff;
+}
+
+.titrenewchantier8 {
+    background-color: red;
+}
+
+.titrenewchantier9 {
+    background-color: brown;
+}
+
+.titrenewchantier20 {
+    background-color: black;
+}
+
+.titrenewchantier25 {
+    background-color: black;
+}
+
+.new_chantier_box_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.new_chantier_box_text input {
+    margin: 0 10px 10px 10px;
+}
+
+.styled {
+    border: 1px solid #0c73b8;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #0c73b8;
+    margin-right: 4px;
+    margin-left: 2px;
+}
+
+.styled:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgb(0, 0, 0);
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}

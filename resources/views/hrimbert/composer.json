@@ -1,0 +1,6 @@
+{
+    "require": {
+        "spipu/html2pdf": "^5.2",
+        "nuzkito/chrome-html-to-pdf": "^2.0"
+    }
+}
