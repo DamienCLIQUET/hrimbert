@@ -143,6 +143,7 @@ p {
                 margin: 2px;
                 font-size: 18px;
                 box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+                cursor: pointer;
                 &_titre {
                     padding: 0;
                     margin: 0;
@@ -326,20 +327,31 @@ p {
     }
     &_produit {
         &_corps {
-            background-color: white;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
             width: calc(100% - 2px);
-            height: calc(100svh - 140px);
-            &_ajout {
+            height: calc(100svh - 116px);
+            background-color: white;
+            &_entete {
                 display: flex;
-                width: 100%;
-                justify-content: space-evenly;
-                padding: 5px 0;
-                & div {
-                    cursor: pointer;
+                justify-content: space-between;
+                padding: 5px;
+                align-items: flex-end;
+                &_ajout {
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    & div {
+                        cursor: pointer;
+                    }
+                }
+                &_total {
+                    white-space: nowrap;
                 }
             }
             &_produits {
-                max-height: calc(100svh - 229px);
+                max-height: 100%;
                 overflow-y: scroll;
                 &::-webkit-scrollbar {
                     display: none;
@@ -374,13 +386,17 @@ p {
                         &_pictos {
                             display: flex;
                             align-items: center;
-                            & svg {
-                                width: 1em;
-                                height: 1em;
-                                display: flex;
-                                margin: 5px 15px;
-                                color: white;
-                                align-items: center;
+                            &_blanc {
+                                height: 25px;
+                                margin: 0 15px;
+                                fill: white;
+                                cursor: pointer;
+                            }
+                            &_rouge {
+                                height: 25px;
+                                margin: 0 25px;
+                                fill: red;
+                                cursor: pointer;
                             }
                         }
                     }
@@ -451,6 +467,19 @@ p {
                                     padding-right: 5px;
                                 }
                             }
+                            &_black {
+                                height: 30px;
+                                margin: 0 15px;
+                                fill: black;
+                                transform: rotate(90deg);
+                                cursor: pointer;
+                            }
+                            &_rouge {
+                                height: 30px;
+                                margin: 0 25px;
+                                fill: red;
+                                cursor: pointer;
+                            }
                         }
                         &_commentaires {
                             display: flex;
@@ -464,20 +493,16 @@ p {
                             }
                             & p {
                                 font-style: italic;
-                                font-size: 12px;
                                 white-space: nowrap;
-                            }
-                            & svg {
-                                width: 1em;
-                                height: 1em;
-                                display: flex;
-                                margin: 5px 15px;
-                                color: white;
-                                align-items: center;
                             }
                         }
                     }
                 }
+            }
+            &_total {
+                text-align: right;
+                width: calc(100% - 5px);
+                margin-top: 5px;
             }
         }
     }

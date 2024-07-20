@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Type;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,6 +15,15 @@ return new class extends Migration {
             $table->string('designation', 255);
             $table->timestamps();
         });
+        
+        Type::create([
+            'id' => '1',
+            'designation' => 'titre'
+        ]);
+        Type::create([
+            'id' => '2',
+            'designation' => 'article'
+        ]);
     }
 
     /**

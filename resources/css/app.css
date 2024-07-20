@@ -146,6 +146,7 @@ p {
   margin: 2px;
   font-size: 18px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  cursor: pointer;
 }
 .accueil_statut_chantiers_chantier_titre {
   padding: 0;
@@ -322,21 +323,32 @@ p {
   padding: 0 2px;
 }
 .chantier_produit_corps {
-  background-color: white;
-  width: calc(100% - 2px);
-  height: calc(100svh - 140px);
-}
-.chantier_produit_corps_ajout {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  padding: 5px 0;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  width: calc(100% - 2px);
+  height: calc(100svh - 116px);
+  background-color: white;
 }
-.chantier_produit_corps_ajout div {
+.chantier_produit_corps_entete {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: flex-end;
+}
+.chantier_produit_corps_entete_ajout {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.chantier_produit_corps_entete_ajout div {
   cursor: pointer;
 }
+.chantier_produit_corps_entete_total {
+  white-space: nowrap;
+}
 .chantier_produit_corps_produits {
-  max-height: calc(100svh - 229px);
+  max-height: 100%;
   overflow-y: scroll;
 }
 .chantier_produit_corps_produits::-webkit-scrollbar {
@@ -375,13 +387,17 @@ p {
   display: flex;
   align-items: center;
 }
-.chantier_produit_corps_produits_produit_zonetitre_pictos svg {
-  width: 1em;
-  height: 1em;
-  display: flex;
-  margin: 5px 15px;
-  color: white;
-  align-items: center;
+.chantier_produit_corps_produits_produit_zonetitre_pictos_blanc {
+  height: 25px;
+  margin: 0 15px;
+  fill: white;
+  cursor: pointer;
+}
+.chantier_produit_corps_produits_produit_zonetitre_pictos_rouge {
+  height: 25px;
+  margin: 0 25px;
+  fill: red;
+  cursor: pointer;
 }
 .chantier_produit_corps_produits_produit_zoneproduit {
   background-color: #eeeeee;
@@ -452,6 +468,19 @@ p {
   background-color: transparent;
   padding-right: 5px;
 }
+.chantier_produit_corps_produits_produit_zoneproduit_produit_black {
+  height: 30px;
+  margin: 0 15px;
+  fill: black;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.chantier_produit_corps_produits_produit_zoneproduit_produit_rouge {
+  height: 30px;
+  margin: 0 25px;
+  fill: red;
+  cursor: pointer;
+}
 .chantier_produit_corps_produits_produit_zoneproduit_commentaires {
   display: flex;
 }
@@ -465,16 +494,12 @@ p {
 }
 .chantier_produit_corps_produits_produit_zoneproduit_commentaires p {
   font-style: italic;
-  font-size: 12px;
   white-space: nowrap;
 }
-.chantier_produit_corps_produits_produit_zoneproduit_commentaires svg {
-  width: 1em;
-  height: 1em;
-  display: flex;
-  margin: 5px 15px;
-  color: white;
-  align-items: center;
+.chantier_produit_corps_total {
+  text-align: right;
+  width: calc(100% - 5px);
+  margin-top: 5px;
 }
 .chantier_photo_corps {
   background-color: white;

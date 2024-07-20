@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Chantier;
 use App\Models\Chantierdetail;
 use App\Models\Article;
 use Livewire\Component;
@@ -75,6 +76,12 @@ class ChantierOngletProduits extends Component {
     }
     
     public function render() {
-        return view('livewire.chantier-onglet-produits');
+        return view('livewire.chantier-onglet-produits', [
+            'chantierdetails' => Chantierdetail::where('chantier_id', $this->id)->orderBy('ordre')->orderBy('created_at')->with('type')->with('titre')->with('article', function ($query) {
+                $query->with('articledetails', function ($query) {
+                    $query->with('product')->with('compose')->with('groupe');
+                });
+            })->get(),
+        ]);
     }
 }

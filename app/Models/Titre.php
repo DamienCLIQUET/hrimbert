@@ -9,15 +9,10 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Article extends Model {
+class Titre extends Model {
     use HasFactory;
 
     protected $fillable = [
-        'designation',
-        'prix'
+        'designation'
     ];
-
-    public function articledetails(): HasMany {
-        return $this->hasMany(Articledetail::class);
-    }
 }

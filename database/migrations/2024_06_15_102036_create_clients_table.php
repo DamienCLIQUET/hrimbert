@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Client;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,6 +19,15 @@ return new class extends Migration {
             $table->string('gsm', 255)->nullable();
             $table->timestamps();
         });
+
+        Client::create([
+            'id' => '1',
+            'nom' => 'CLIQUET',
+            'prenom' => 'Damien',
+            'email' => 'd.cliquet@gmail.com',
+            'tel' => '',
+            'gsm' => '0682578631'
+        ]);
     }
 
     /**

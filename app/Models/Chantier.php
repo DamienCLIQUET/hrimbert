@@ -28,6 +28,18 @@ class Chantier extends Model {
         'date'
     ];
 
+    public function action(): HasOne {
+        return $this->hasOne(Action::class);
+    }
+
+    public function actions(): HasMany {
+        return $this->hasMany(Action::class);
+    }
+
+    public function chantierdetails(): HasMany {
+        return $this->hasMany(Chantierdetail::class);
+    }
+
     public function lieu(): BelongsTo {
         return $this->belongsTo(Lieu::class, 'lieu_id');
     }

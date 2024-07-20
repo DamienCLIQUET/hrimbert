@@ -14,14 +14,6 @@ return new class extends Migration {
             $table->string('designation', 255);
             $table->timestamps();
         });
-
-        Schema::create('compose_product', function (Blueprint $table) {
-            $table->foreignIdFor(App\Models\Compose::class)->constrained()->cascadeOnDelete();
-            $table->foreignIdFor(App\Models\Product::class)->constrained()->cascadeOnDelete();
-            $table->integer('quantite');
-            $table->integer('prix');
-            $table->primary(['compose_id', 'product_id']);
-        });
     }
 
     /**

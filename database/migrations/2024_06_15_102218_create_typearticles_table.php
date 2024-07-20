@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Typechantier;
+use App\Models\Typearticle;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -10,23 +10,23 @@ return new class extends Migration {
      * Run the migrations.
      */
     public function up(): void {
-        Schema::create('typechantiers', function (Blueprint $table) {
+        Schema::create('typearticles', function (Blueprint $table) {
             $table->id();
             $table->string('designation', 255);
             $table->timestamps();
         });
 
-        Typechantier::create([
+        Typearticle::create([
             'id' => '1',
-            'designation' => 'Normal',
+            'designation' => 'product'
         ]);
-        Typechantier::create([
+        Typearticle::create([
             'id' => '2',
-            'designation' => 'Urgence',
+            'designation' => 'compose'
         ]);
-        Typechantier::create([
+        Typearticle::create([
             'id' => '3',
-            'designation' => 'Contrat',
+            'designation' => 'groupe'
         ]);
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration {
      * Reverse the migrations.
      */
     public function down(): void {
-        Schema::dropIfExists('typechantiers');
+        Schema::dropIfExists('typearticles');
     }
 };
